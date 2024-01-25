@@ -339,7 +339,8 @@ poly_results %>%
   ggplot(aes(x = package, y = price)) + 
   geom_point() +
   geom_smooth(method=lm, se=FALSE) +
-  geom_smooth(method = lm, formula = y ~ poly(x, degree = 3), color = "midnightblue", size = 1.2, se = FALSE) 
+  geom_smooth(method = lm, formula = y ~ poly(x, degree = 3), color = "midnightblue", size = 1.2, se = FALSE) +
+  ggtitle("Polynomial Regression Showing Relationship Between Price and Package")
 
 
 # view poly_results df and class of package and price variables
@@ -533,7 +534,8 @@ output %>%
   ggplot(aes(x = city_name, y = price)) + 
   geom_point() +
   geom_smooth(method = lm, formula = y ~ poly(x, degree = 3), color = "green", size = 1.2, se = FALSE) +
-  xlab("City Name")
+  xlab("City Name") +
+  ggtitle("Polynomial Regression Showing Relationship Between City Name and Price")
 ```
   
 Lab 2 due 1/24 at 11:59 PM
